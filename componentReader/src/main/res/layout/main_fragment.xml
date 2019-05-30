@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <Button
+        android:id="@+id/bt_a"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="AAA" />
+
+    <Button
+        android:id="@+id/bt_b"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="BBB" />
+
+    <Button
+        android:id="@+id/bt_c"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="CCC" />
+
+    <Button
+        android:id="@+id/bt_d"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="DDD" />
+
+</LinearLayout>

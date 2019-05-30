@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.umu.componentshare">
+
+    <application
+       >
+
+        <activity android:name="com.umu.componentshare.ShareActivity"></activity>
+
+    </application>
+
+</manifest>

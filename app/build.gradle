@@ -1,0 +1,38 @@
+apply plugin: 'com.dd.comgradle'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.androidTools
+    defaultConfig {
+        applicationId "com.umu.component"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        /*javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [host: "app"]
+            }
+        }*/
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    testImplementation deps.junit
+    implementation deps.support.v7.appcompat
+    implementation project(':componentservice')
+    annotationProcessor deps.jimu.router_anno_compiler
+}
+
+combuild {
+    applicationName = 'com.umu.component.application.AppApplication'
+    isRegisterCompoAuto = true
+}
