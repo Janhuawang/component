@@ -2,8 +2,10 @@ package com.umu.componentshare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
+import com.luojilab.component.componentlib.router.ui.UIRouter;
 import com.luojilab.router.facade.annotation.Autowired;
 import com.luojilab.router.facade.annotation.RouteNode;
 import com.umu.baseres.BaseActivity;
@@ -37,6 +39,14 @@ public class ShareActivity extends BaseActivity {
     private void onView() {
         textView = findViewById(R.id.tv_content);
         textView.setText(content);
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UIRouter.getInstance().openUri(ShareActivity.this,"DDComp://host/host/one",null);
+            }
+        });
+
     }
 
 
